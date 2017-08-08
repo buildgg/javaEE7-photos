@@ -96,11 +96,11 @@ public class Photo extends AbstractDomain {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false)
     @NotNull
-    public Profile getProfileByProfileId() {
+    public Profile getProfile() {
         return profile;
     }
 
-    public void setProfileByProfileId(Profile profile) {
+    public void setProfile(Profile profile) {
         this.profile = profile;
     }
 }

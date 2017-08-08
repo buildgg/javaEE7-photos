@@ -29,11 +29,11 @@ public class AccessToken extends AbstractDomain{
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "profile_id", referencedColumnName = "id", nullable = false)
     @NotNull
-    public Profile getProfileByProfileId() {
+    public Profile getProfile() {
         return profile;
     }
 
-    public void setProfileByProfileId(Profile profile) {
+    public void setProfile(Profile profile) {
         this.profile = profile;
     }
 }

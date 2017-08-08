@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * Created by vov on 13.07.2017.
@@ -15,18 +16,18 @@ import java.sql.Timestamp;
 @MappedSuperclass
 public class AbstractDomain implements Serializable {
 
-    private Timestamp created;
+    private Date created;
 
     @Basic
     @Column(name = "created", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     @NotNull
     @Past
-    public Timestamp getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(Timestamp created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 

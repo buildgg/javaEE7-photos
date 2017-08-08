@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "profile", schema = "public", catalog = "myphotos")
 public class Profile extends AbstractDomain {
-    private long id;
+    private Long id;
     private String uid;
     private String email;
     private String firstName;
@@ -35,11 +35,11 @@ public class Profile extends AbstractDomain {
     @GeneratedValue(generator = "profile_generator",
                     strategy = GenerationType.SEQUENCE)
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
