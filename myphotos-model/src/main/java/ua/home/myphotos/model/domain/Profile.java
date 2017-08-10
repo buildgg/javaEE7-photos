@@ -154,4 +154,9 @@ public class Profile extends AbstractDomain {
         this.rating = rating;
     }
 
+    @Transient
+    public String getFullName() {
+        return getFirstName() + getLastName();
+    }
+
 }
